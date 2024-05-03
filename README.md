@@ -12,7 +12,7 @@
 #### Dependencies
 1. Fonts : Fira Code Nerd Font Mono (https://www.nerdfonts.com)
 2. CLI Apps
-    2.1. acpi
+    1. acpi
 
 #### Post Install
 1. `chmod +x ~/.local/bin/*`
