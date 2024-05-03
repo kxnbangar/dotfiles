@@ -1,0 +1,22 @@
+#!/bin/bash
+
+case $1 in
+	"e")
+		xbps-query --list-manual-pkgs
+		;;
+	"l")
+		xbps-query --list-pkgs
+		;;
+	"o")
+		xbps-query --list-orphans
+		;;
+	"s")
+		xbps-query -R --search $2
+		;;
+	"u")
+		sudo xbps-install -Su
+		;;
+	*)
+		echo No valid option provided
+		;;
+esac
