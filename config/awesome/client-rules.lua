@@ -75,4 +75,8 @@ awful.rules.rules = {
       		     x     = 192,      y      = 108+32 } },
     { rule = { name = "powermenu" },
       properties = { titlebars_enabled = false } },
+    { rule = { name = "KXN Dock" },
+      properties = { titlebars_enabled = false, floating = true, is_fixed = true,
+		     skip_taskbar = true, ontop = false, sticky = true,
+		     border_width = beautiful.dock_border_width, focusable = false} },
 }

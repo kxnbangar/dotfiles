@@ -86,10 +86,11 @@ end
 ----------
 -- Bars --
 ----------
-status_bar = require("status-bar")
-awful.screen.connect_for_each_screen(function(s)
-      set_wallpaper(s)
-      s.status_bar = status_bar.create_status_bar(s)
+bars = require("bars")
+awful.screen.connect_for_each_screen(function(scr)
+      set_wallpaper(scr)
+      awful.tag({ " ", " ", " ", " ", "?" }, s, awful.layout.layouts[1])
+      scr.status_bar = bars.create_status_bar(scr)
 end)
 
 --------------------------

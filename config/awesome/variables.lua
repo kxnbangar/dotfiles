@@ -18,7 +18,7 @@ vars.modkey = "Mod4"
 vars.style_dir = "~/.config/awesome/style/theme.lua"
 
 menubar.utils.terminal = vars.terminal
-vars.rofi_appsmenu  = "rofi -show drun -show-icons -theme style.rasi -icon-theme Papirus-Light"
+vars.rofi_appsmenu  = "rofi -show drun -show-icons -theme launcher/style.rasi -icon-theme Papirus-Light"
 vars.rofi_powermenu = "~/.config/rofi/powermenu/powermenu.sh"
 
 return vars

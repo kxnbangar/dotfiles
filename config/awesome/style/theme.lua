@@ -1,5 +1,5 @@
 ---------------------------
--- Default awesome theme --
+-- KXN AwesomeWM Theming --
 ---------------------------
 
 local theme_assets = require("beautiful.theme_assets")
@@ -13,8 +13,30 @@ local images_dir  = "~/.config/awesome/style/images/"
 
 local theme = {}
 
--- Latte colors
-theme.font          = "FiraCodeNerdFont 10"
+---------------------------
+-- General configuration --
+---------------------------
+theme.font = "FiraCodeNerdFont 8"
+theme.useless_gap  = 4 -- dpi(2)
+theme.border_width = 6 -- dpi(4)
+theme.dock_border_width = 2
+theme.roundness    = 6
+
+------------
+-- Colors --
+------------
+-- Basic colors using only "ff" and "00" values
+theme.only_red    = "#ff0000"
+theme.only_green  = "#00ff00"
+theme.only_blue   = "#0000ff"
+theme.only_white  = "#ffffff"
+theme.only_black  = "#000000"
+theme.transparent = "#ffffff00"
+
+-----------------------------
+-- Catppuccin latte colors --
+-----------------------------
+theme.base          = "#eff1f5"
 theme.green         = "#40a02b"
 theme.maroon        = "#e64553"
 theme.flamingo      = "#dd7878"
@@ -23,7 +45,7 @@ theme.mocha_green   = "#a6e3a1"
 theme.mocha_red     = "#f38ba8"
 
 theme.bg_normal     = "#ccd0da" -- SUR0
-theme.bg_focus      = "#eff1f5" -- BASE
+theme.bg_focus      = theme.base
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
@@ -33,8 +55,6 @@ theme.fg_focus      = "#4c4f69" -- TEXT
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = 6 -- dpi(2)
-theme.border_width  = 6 -- dpi(4)
 theme.border_normal = "#5c5f77" -- SUBTEXT1
 theme.border_focus  = theme.flamingo
 theme.border_marked = "#91231c"
@@ -42,12 +62,16 @@ theme.border_marked = "#91231c"
 theme.wallpaper = themes_path.."default/background.png"
 theme.wallpaper = style_dir .. "background.png"
 
-theme.roundness  = 12
+-------------------------
+-- Status bar themeing --
+-------------------------
+theme.status_bar_bg_color = theme.transparent
+theme.status_bar_height   = 60
+theme.status_bar_spacing  = 6
 
--- Status bar theming
-theme.statusb_sz = 60
-
--- Sidebar theming
+---------------------
+-- Sidebar theming --
+---------------------
 theme.sidebar_sz = 30
 theme.sidebar_mg = 3
 
