@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# CTM-VARS
+# Author: Arsh Bangar
+# Desc: A script to rotate screen and corresponding coordinate transformation matrix (CTM) for touchscreen and stylus via xrandr and xinput
+#
+# Variables with sensible defaults
+display_name="eDP-1"        # ouput display of xrandr; check xrandr manpage to find out the display name
+display_rot="normal"       # one of normal, inverted, left and right or as in xrandr manpage
+touch_name='ELAN2513:00\ 04F3:2B50' # name of touchscreen enabled device; found using xinput command, see manpage xinput
+stylus_name="ELAN2513:00 04F3:2B50 Stylus Pen (0)" # name of stylus device as in the output of xinput command, see xinput manpage
+CTM="1 0 0 0 1 0 0 0 1"    # to avoid errors; Normal coordinates of transformation matrix
+NCTM="1 0 0 0 1 0 0 0 1"   # normal coordinates of transformation matrix
+ICTM="-1 0 1 0 -1 1 0 0 1" # inverted coordinates of transformation matrix
+
+# Changing the state of hardware using above variables
+function set_ctm
+{
+    xrandr --output $display_name --rotate $display_rot # for screen rotation
+    xinput set-prop ELAN2513:00\ 04F3:2B50 Coordinate\ Transformation\ Matrix $CTM # for changing CTM of touchscreen
+    #xinput set-prop $stylus_name Coordinate\ Transformation\ Matrix $CTM # for changing CTM of stylus
+}
+
+# Going through valid arguments and setting required variables
+if [[ $1 == "i" ]]; then
+    CTM=$ICTM;
+    display_rot="inverted";
+    set_ctm;
+elif [[ $1 == "n" ]]; then
+    CTM=$NCTM;
+    display_rot="normal";
+    set_ctm;
+else
+    echo "Not a valid argument";
+fi
+
+
+
+## TODO
+# Put commands within a function     DONE
+# Catch all possible exceptions
+# Optional: Determine device names dynamically using sed, awk
