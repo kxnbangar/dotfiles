@@ -4,6 +4,7 @@ set -o errexit
 CFGS_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 CFG_DEFGRUB=/etc/default/grub
+CFG_IWLWIFI=/etc/modprobe.d/iwlwifi.conf
 
 cfg_install () {
     echo "W.I.P"
@@ -13,7 +14,7 @@ cfg_backup () {
     echo "Backup started"
     if [ -f $CFG_DEFGRUB ]; then
 	cp -i $CFG_DEFGRUB $CFGS_DIR$CFG_DEFGRUB
-	echo "Copied <?> configuration"
+	echo "Copied ${CFG_DEFGRUB} to ${CFGS_DIR}${CFG_DEFGRUB}"
     else
 	echo "<?> configuration does not exist"
     fi
