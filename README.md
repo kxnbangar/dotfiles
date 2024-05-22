@@ -1,6 +1,8 @@
 ## KXN configurations as dotfiles
 
 #### App configurations
+| Sr | Category | Appname  |
+| -- | -------- | -------- |
 | 1 | Terminal | Alacritty |
 
 2. Interactive Shell: Fish
