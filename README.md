@@ -1,11 +1,10 @@
 ## KXN configurations as dotfiles
 
 #### App configurations
-| Sr | Category | Appname  |
-| -- | -------- | -------- |
-| 1 | Terminal | Alacritty |
-
-2. Interactive Shell: Fish
+| Sr | Category          | Appname   |
+| -- | ----------------- | --------- |
+| 1  | Terminal          | Alacritty |
+| 2  | Interactive Shell | Fish      |
 3. Window Manager : AwesomeWM
 4. X11 Compositor : Picom (yshui)
 5. Menus: Rofi
