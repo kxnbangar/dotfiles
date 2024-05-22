@@ -1,7 +1,7 @@
-## KXN configurations as dotfiles
+## KXN dotfiles
 
 ### Configurations
-#### App configurations
+#### Apps
 | Sr | Category          | Appname       |
 | -- | ----------------- | ------------- |
 | 1  | Terminal          | Alacritty     |
@@ -12,11 +12,11 @@
 | 6  | IDE               | Emacs         |
 | 7  | Bootloader        | Grub          |
 
-#### System/Kernel configurations
+#### System/Kernel
 1. iwlwifi.conf
 
 #### Scripts
-In /home/local/bin
+In /home/local/bin\
 See comments for description
 
 ### How to use?
