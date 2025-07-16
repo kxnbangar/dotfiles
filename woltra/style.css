@@ -1,0 +1,81 @@
+:root {
+	/* Catppuccin Mocha */
+	--color-text:		rgb(205, 214, 244);
+	--color-text-hover:	rgba(205, 214, 244, 0.2);
+	--color-base:		rgb(30, 30, 46);
+
+	/* Spacing */
+	--bar-radius:	0px 0px 0px 0px;
+	--border-radius: 8px;
+
+	/* Typography */
+	--font-family-mono: "BlexMonoNerdFont";
+	--font-family-sans: "";
+	--font-weight: bold;
+	--font-size: 10pt;
+}
+
+* {
+		/*all: unset;*/
+}
+
+.status-bar {
+	padding: 2px;
+	border: 0px solid var(--color-text);
+	border-radius: var(--bar-radius);
+	font-family: var(--font-family-mono);
+	font-weight: var(--font-weight);
+
+	color: var(--color-text);
+	background-color: var(--color-base);
+}
+
+.apps-menu {
+		border: 2px solid #cdd6f422;
+		border-radius: 8px;
+		font-family: var(--font-family-mono);	
+
+		color: var(--color-text);
+		background-color: #1e1e2e88;
+}
+
+.vbox-container {
+		padding: 8px;
+}
+
+.apps-menu .selected {
+		background-color: #89b4fa88;
+		color: white;
+}
+
+.input-box {
+		padding: 8px;
+		margin: 8px;
+		border-radius: 8px;
+		background-color: #cdd6f411;
+}
+
+.menu-item {
+		padding: 12px;
+		margin: 8px;
+		margin-top: 4px;
+		border-radius: 8px;
+
+		background-color: #cdd6f444;
+}
+
+listbox {
+		/*background-color: brown;*/
+}
+
+row {
+		/*background-color: #1e1e2e;
+		color: #cdd6f4;
+		border-radius: 8px;
+		margin: 6px;*/
+}
+
+button {
+		border-radius: 0px;
+		color: white;
+}
