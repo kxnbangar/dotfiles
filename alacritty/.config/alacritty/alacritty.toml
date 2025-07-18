@@ -1,0 +1,13 @@
+[general]
+import = [
+	"~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[font]
+size   = 16
+normal = { family = "ProFontWindows Nerd Font Mono" }
+
+[window]
+padding = { x = 12, y = 12 }
+opacity = 0.50
+blur = true
